@@ -3,6 +3,7 @@ import { Schibsted_Grotesk, Martian_Mono } from "next/font/google";
 import "./globals.css";
 import LightRays from '../components/Lightrays';
 import Navbar from "@/components/Navbar";
+import { Analytics } from "@vercel/analytics/next";
 
 
 const schibstedGrotesk = Schibsted_Grotesk({
@@ -47,6 +48,7 @@ export default function RootLayout({
 
         <main>
           {children}
+          <Analytics />
         </main>
       </body>
     </html>
