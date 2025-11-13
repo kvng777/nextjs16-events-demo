@@ -3,8 +3,6 @@ import { Schibsted_Grotesk, Martian_Mono } from "next/font/google";
 import "./globals.css";
 import LightRays from '../components/Lightrays';
 import Navbar from "@/components/Navbar";
-import { Analytics } from "@vercel/analytics/next";
-
 
 const schibstedGrotesk = Schibsted_Grotesk({
   variable: "--font-schibsted-grotesk",
@@ -29,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${schibstedGrotesk.variable} ${martianMono.variable} antialiased border-4 border-amber-300 min-h-screen`}
+        className={`${schibstedGrotesk.variable} ${martianMono.variable} antialiased min-h-screen`}
       >
         <Navbar />
         <div className="absolute inset-0 z-[-1] min-h-screen">
@@ -48,7 +46,6 @@ export default function RootLayout({
 
         <main>
           {children}
-          <Analytics />
         </main>
       </body>
     </html>
